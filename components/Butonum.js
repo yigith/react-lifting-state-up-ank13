@@ -1,13 +1,10 @@
-import { useState } from "react";
 import styles from '@/styles/Butonum.module.css';
 
-export default function Butonum() {
-    const [sayi, setSayi] = useState(0);
-    const handleClick = () => setSayi(sayi + 1);
+export default function Butonum(props) {
 
     return (
-        <button className={styles.Butonum} onClick={handleClick}>
-            {sayi}
+        <button onClick={props.onClick} className={styles.Butonum} >
+            {props.sayi}
         </button>
     );
 }
